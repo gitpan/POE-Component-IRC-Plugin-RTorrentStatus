@@ -12,18 +12,24 @@ use POE::Component::IRC::Plugin qw(PCI_EAT_NONE);
 use POE::Component::IRC::Common qw(NORMAL DARK_GREEN DARK_BLUE ORANGE TEAL BROWN);
 use POE::Component::IRC::Plugin::FollowTail;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub new {
     my ($package, %args) = @_;
     my $self = bless \%args, $package;
 
-    if (!defined $self->{Torrent_log} || !-e $self->{Torrent_log}) {
-        croak __PACKAGE__ . ": the specified torrent log doesn't exist";
+    if (!defined $self->{Torrent_log}) {
+        croak __PACKAGE__ . ": No torrent log file defined";
     }
 
     if (ref $self->{Channels} ne 'ARRAY' || !$self->{Channels}) {
         croak __PACKAGE__ . ': No channels defined';
+    }
+
+    if (!-e $self->{Torrent_log}) {
+        open my $foo, '>', $self->{Torrent_log}
+            or die "Can't create $self->{Torrent_log}: $!\n";
+        close $foo;
     }
 
     # defaults
