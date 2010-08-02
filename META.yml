@@ -21,8 +21,8 @@ no_index:
     - t
     - xt
 requires:
+  Capture::Tiny: 0
   DateTime: 0
-  DateTime::Duration: 0
   DateTime::Format::Human::Duration: 0
   Format::Human::Bytes: 0
   List::Util: 0
@@ -35,4 +35,4 @@ resources:
   homepage: http://search.cpan.org/dist/POE-Component-IRC-Plugin-RTorrentStatus
   license: http://dev.perl.org/licenses/
   repository: git://github.com/hinrik/poe-component-irc-plugin-rtorrentstatus.git
-version: 0.04
+version: 0.05
