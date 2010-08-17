@@ -1,3 +1,7 @@
+0.06  Tue Aug 17 22:55:10 GMT 2010
+    - Use Dist::Zilla
+    - Make all warnings fatal
+
 0.05 Mon Aug  2 08:39:02 GMT 2010
     - Added timestamps to the log file.
     - Report the start of the hash check as well as the end of it. This way,

@@ -1,7 +1,13 @@
 package POE::Component::IRC::Plugin::RTorrentStatus;
+BEGIN {
+  $POE::Component::IRC::Plugin::RTorrentStatus::AUTHORITY = 'cpan:HINRIK';
+}
+BEGIN {
+  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.06';
+}
 
 use strict;
-use warnings;
+use warnings FATAL => 'all';
 use Carp qw(croak);
 use DateTime;
 use DateTime::Format::Human::Duration;
@@ -10,8 +16,6 @@ use Format::Human::Bytes;
 use POE::Component::IRC::Plugin qw(PCI_EAT_NONE);
 use POE::Component::IRC::Common qw(NORMAL DARK_GREEN DARK_BLUE ORANGE TEAL BROWN);
 use POE::Component::IRC::Plugin::FollowTail;
-
-our $VERSION = '0.05';
 
 sub new {
     my ($package, %args) = @_;
@@ -182,8 +186,7 @@ sub _fmt_bytes {
 
 =head1 NAME
 
-POE::Component::IRC::Plugin::RTorrentStatus - A PoCo-IRC plugin which prints
-RTorrent status messages to IRC
+POE::Component::IRC::Plugin::RTorrentStatus - A PoCo-IRC plugin which prints RTorrent status messages to IRC
 
 =head1 SYNOPSIS
 
