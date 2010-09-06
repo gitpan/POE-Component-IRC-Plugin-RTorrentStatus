@@ -40,7 +40,7 @@
             "List::Util" : 0,
             "POE" : 0,
             "POE::Component::IRC" : 0,
-            "POE::Component::Plugin::FollowTail" : "6.22"
+            "POE::Component::IRC::Plugin::FollowTail" : "6.22"
          }
       }
    },
@@ -60,7 +60,7 @@
          "web" : "http://github.com/hinrik/poe-component-irc-plugin-rtorrentstatus"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_authority" : "cpan:HINRIK"
 }
 
