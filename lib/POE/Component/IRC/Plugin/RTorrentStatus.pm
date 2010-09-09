@@ -3,7 +3,7 @@ BEGIN {
   $POE::Component::IRC::Plugin::RTorrentStatus::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.07';
+  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.08';
 }
 
 use strict;
@@ -189,6 +189,13 @@ sub _fmt_bytes {
 POE::Component::IRC::Plugin::RTorrentStatus - A PoCo-IRC plugin which prints RTorrent status messages to IRC
 
 =head1 SYNOPSIS
+
+To quickly get an IRC bot with this plugin up and running, you can use
+L<App::Pocoirc|App::Pocoirc>:
+
+ $ pocoirc -s irc.perl.org -j '#bots' -p 'RTorrentStatus{ "Channels": ["#bots"] }'
+
+Or use it in your code:
 
  use POE::Component::IRC::Plugin::RTorrentStatus;
 
