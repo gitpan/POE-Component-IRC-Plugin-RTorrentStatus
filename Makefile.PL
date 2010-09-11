@@ -33,7 +33,7 @@ my %WriteMakefileArgs = (
     'POE::Component::IRC' => '0',
     'POE::Component::IRC::Plugin::FollowTail' => '6.22'
   },
-  'VERSION' => '0.08',
+  'VERSION' => '0.09',
   'test' => {
     'TESTS' => 't/*.t'
   }
