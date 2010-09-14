@@ -3,7 +3,7 @@ BEGIN {
   $POE::Component::IRC::Plugin::RTorrentStatus::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.09';
+  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.10';
 }
 
 use strict;
@@ -156,7 +156,7 @@ sub _erased_torrent {
             : "Removed: $name (ratio: $ratio, uploaded: $up)";
     }
     else {
-        my $done = sprintf '%.f%', $down_bytes / $size_bytes * 100;
+        my $done = sprintf '%.f%%', $down_bytes / $size_bytes * 100;
         $msg = $self->{Color}
             ? BROWN.'Aborted: '.ORANGE.$name.NORMAL." ($done done, ratio: $ratio, uploaded: $up)"
             : "Aborted: $name ($done done, ratio: $ratio, uploaded: $up)";
