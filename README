@@ -6,7 +6,7 @@ SYNOPSIS
     To quickly get an IRC bot with this plugin up and running, you can use
     App::Pocoirc:
 
-     $ pocoirc -s irc.perl.org -j '#bots' -a 'RTorrentStatus{ "Channels": ["#bots"] }'
+     $ pocoirc -s irc.perl.org -j '#bots' -a 'RTorrentStatus{ "Channels": ["#bots"], "Torrent_log": "/tmp/torrentlog" }'
 
     Or use it in your code:
 

@@ -1,3 +1,8 @@
+0.12  Thu Dec 2 20:06:58 GMT 2010
+    - Describe caveats related to catching error messages for failed unrars
+    - Add missing argument to pocoirc example in SYNOPSIS
+    - Add missing RTorrent hook for erased torrents
+
 0.11  Tue Sep 28 08:54:33 GMT 2010
     - Update SYNOPSIS to reflect App-Pocoirc changes
 
