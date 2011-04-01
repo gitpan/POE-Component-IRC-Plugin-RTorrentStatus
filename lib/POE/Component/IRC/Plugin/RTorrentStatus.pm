@@ -3,7 +3,7 @@ BEGIN {
   $POE::Component::IRC::Plugin::RTorrentStatus::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.12';
+  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.13';
 }
 
 use strict;
@@ -137,6 +137,7 @@ sub _unrar_torrent {
 
 sub _unrar_failed_torrent {
     my ($self, $name, $error) = @_;
+    $error = '' if !defined $error;
 
     return $self->{Color}
         ? BROWN.'Unrar failed: '.ORANGE.$name.NORMAL.": $error"
