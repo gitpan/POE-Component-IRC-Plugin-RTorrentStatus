@@ -1,3 +1,7 @@
+0.14  Sat Apr 2 00:57:44 GMT 2011
+    - Expand '~' in torrent log filename, and convert it to an absolute
+      path in case the process will chdir().
+
 0.13  Fri Apr 1 23:02:19 GMT 2011
     - Add more troubleshooting info for the RTorrent configuration
     - Avoid an undefined warning when the unrar fails with no error message
