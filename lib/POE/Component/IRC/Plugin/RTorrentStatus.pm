@@ -3,16 +3,16 @@ BEGIN {
   $POE::Component::IRC::Plugin::RTorrentStatus::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.14';
+  $POE::Component::IRC::Plugin::RTorrentStatus::VERSION = '0.15';
 }
 
 use strict;
 use warnings FATAL => 'all';
 use Carp qw(croak);
-use Cwd qw(abs_path);
 use DateTime;
 use DateTime::Format::Human::Duration;
 use File::Glob ':glob';
+use File::Spec::Functions 'rel2abs';
 use Format::Human::Bytes;
 use POE::Component::IRC::Plugin qw(PCI_EAT_NONE);
 use POE::Component::IRC::Common qw(NORMAL DARK_GREEN DARK_BLUE ORANGE TEAL BROWN PURPLE MAGENTA);
@@ -30,7 +30,7 @@ sub new {
         croak __PACKAGE__ . ': No channels defined';
     }
 
-    $self->{Torrent_log} = abs_path(bsd_glob($self->{Torrent_log}));
+    $self->{Torrent_log} = rel2abs(bsd_glob($self->{Torrent_log}));
     if (!-e $self->{Torrent_log}) {
         open my $foo, '>', $self->{Torrent_log}
             or die "Can't create $self->{Torrent_log}: $!\n";
