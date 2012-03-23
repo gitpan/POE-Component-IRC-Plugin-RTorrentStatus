@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: 1.07
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.102342, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110440'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -29,8 +29,8 @@ requires:
   POE::Component::IRC::Plugin::FollowTail: 6.22
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=POE-Component-IRC-Plugin-RTorrentStatus
-  homepage: http://search.cpan.org/dist/POE-Component-IRC-Plugin-RTorrentStatus/
+  homepage: http://metacpan.org/release/POE-Component-IRC-Plugin-RTorrentStatus
   license: http://dev.perl.org/licenses/
   repository: git://github.com/hinrik/poe-component-irc-plugin-rtorrentstatus.git
-version: 0.15
+version: 0.16
 x_authority: cpan:HINRIK
