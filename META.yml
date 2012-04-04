@@ -32,5 +32,5 @@ resources:
   homepage: http://metacpan.org/release/POE-Component-IRC-Plugin-RTorrentStatus
   license: http://dev.perl.org/licenses/
   repository: git://github.com/hinrik/poe-component-irc-plugin-rtorrentstatus.git
-version: 0.16
+version: 0.17
 x_authority: cpan:HINRIK
